@@ -36,7 +36,7 @@ const technologyImages: { [key: string]: string } = {
 export function ThreeDCardDemo(props: FinalProjectProps) {
   console.log(props);
   return (
-    <CardContainer className="w-96 inter-var">
+    <CardContainer className="w-full md:w-96 inter-var">
       <CardBody className={`${props.theme === "dark" ? "bg-black text-stone-300" : "bg-white text-black"}  relative group/card border-black/[0.1] w-full sm:w-[30rem] h-[550px] rounded-xl p-10 border`}>
         <CardItem className="mb-4">
           <img
