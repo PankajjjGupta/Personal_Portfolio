@@ -11,7 +11,10 @@ interface Project {
     };
 }
 
-
+interface Skills {
+    tech_type : string,
+    values : string[]
+}
 
 interface Education {
     name: string;
@@ -24,7 +27,7 @@ interface Education {
 
 interface PortfolioData {
     Projects: Project[];
-    Skills: string[];
+    Skills: Skills[];
     Education: Education[];
 }
 
@@ -91,7 +94,25 @@ export const defaultValue: PortfolioData = {
             }
         }
     ],
-    Skills: ["TypeScript", "Javascript", "ReactJs"],
+    Skills: [
+        {
+            tech_type : "Programming Languages",
+            values : ["Javascript", "Typescript"]
+        },
+        {
+            tech_type : "Markup & Style",
+            values : ["CSS", "HTML"]
+        },
+        {
+            tech_type : "Frameworks & Libraries",
+            values : ["ReactJs", "NextJs", "ExpressJs", "Mongoose", "Prisma"]
+        },
+        {
+            tech_type : "Databases",
+            values :  ["MongoDB", "Postgres"]
+
+        }
+    ],
     Education: [
         {
             name : "Bachelor degree of Information Technology",

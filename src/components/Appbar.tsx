@@ -13,11 +13,13 @@ import {
     RiCloseLine
 } from "@remixicon/react"
 import { ThemeContext } from "../context/Theme"
+import { useNavigate } from "react-router-dom"
 
 export function Appbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const context = useContext(ThemeContext)
     const isDarkMode = context?.theme === 'dark'
+    const navigate = useNavigate();
 
     function handleTheme(e: React.MouseEvent) {
         e.preventDefault()
@@ -32,11 +34,11 @@ export function Appbar() {
     return (
         <>
             {/* Desktop Navigation */}
-            <div className={`hidden lg:flex ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'} border-b border-stone-200 dark:border-stone-700 w-full justify-center`}>
+        <div className={`hidden lg:flex ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'} border-b border-stone-200 dark:border-stone-700 w-full justify-center`}>
                 <div className="flex w-3/4 justify-between items-center">
                     <Logo logoName="Pankaj Gupta" color={isDarkMode ? "" : "black"}/>
                     <div className="flex gap-3 justify-evenly">
-                        <DesktopNavLink to="/" icon={<RiDragMoveLine size={18} />} text="Skills" />
+                        <DesktopNavLink to="/skills" icon={<RiDragMoveLine size={18} />} text="Skills" />
                         <DesktopNavLink to="/projects" icon={<RiInstanceLine size={18} />} text="Projects" />
                         <DesktopNavLink to="/education" icon={<RiGraduationCapLine size={18} />} text="Education" />
                         <DesktopNavLink to="/resume" icon={<RiFileTextLine size={18} />} text="Resume" />
@@ -48,27 +50,27 @@ export function Appbar() {
                         </div>
                     </div>
                 </div>
-            </div>
+        </div>
 
             {/* Mobile Navigation */}
-<div className={`lg:hidden sticky top-0 z-20 w-full ${isDarkMode ? "bg-black text-white" : 'bg-white text-black'}`}>
-    {/* Fixed Navbar */}
-    <div className="w-full border-b border-stone-700">
-        <div className="flex py-3 px-4 justify-between items-center">
-            <div className="text-xl font-semibold">{"</>"}</div>
-            <div>Pankaj Gupta</div>
-            <button onClick={toggleMenu} aria-label="Toggle menu">
-                {isMenuOpen ? <RiCloseLine size={18} /> : <RiMenuLine size={18} />}
-            </button>
-        </div>
-    </div>
+     <div className={`lg:hidden sticky top-0 z-20 w-full ${isDarkMode ? "bg-black text-white" : 'bg-white text-black'}`}>
+        {/* Fixed Navbar */}
+            <div className="w-full border-b border-stone-700">
+                <div className="flex py-3 px-4 justify-between items-center">
+                    <div  onClick={() => navigate("/")} className="cursor-pointer text-xl font-semibold">{"</>"}</div>
+                    <div onClick={() => navigate("/")} className="cursor-pointer">Pankaj Gupta</div>
+                    <button onClick={toggleMenu} aria-label="Toggle menu">
+                        {isMenuOpen ? <RiCloseLine size={18} /> : <RiMenuLine size={18} />}
+                    </button>
+                </div>
+            </div>
     
     {/* Mobile Menu */}
     <div 
         className={`fixed z-50 left-0 w-full h-screen 
             ${isDarkMode ? 'bg-black text-white' : 'bg-white text-black'}  
             overflow-hidden transition-[max-height] duration-300 ease-in-out
-            ${isMenuOpen ? 'max-h-[calc(100vh-53px)]' : 'max-h-0'}
+            ${isMenuOpen ? 'max-h-[calc(100vh)]' : 'max-h-0'}
         `}
     >
         <nav className={`absolute transition-all top-[-500px] duration-300 ease-in-out flex flex-col space-y-4 p-4 ${isMenuOpen ? 'top-0' : ''}`}>

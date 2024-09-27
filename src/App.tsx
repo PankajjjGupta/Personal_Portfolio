@@ -6,10 +6,12 @@ import { ThemeContext } from './context/Theme';
 import { PortfolioDataContext, defaultValue } from './context/User';
 import { Projects } from './pages/Projects';
 import "./App.css"
+import { Skills } from './pages/Skills';
 
 function App() {
   // Initialize the theme state
   const [theme, setTheme] = useState<string>(() => {
+    console.log('App effect')
     const storedTheme = window.localStorage.getItem("pref_theme");
     return storedTheme ? storedTheme : "dark"; // Default to "dark" if null
   });
@@ -25,6 +27,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/projects' element={<Projects />} />
+            <Route path='/skills' element={<Skills />}></Route>
             <Route path='/*' element={<div>404 | Page Not Found</div>} />
           </Routes>
         </PortfolioDataContext.Provider>
