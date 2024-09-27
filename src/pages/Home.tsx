@@ -14,7 +14,7 @@ export function Home() {
             <div className="flex-grow flex items-center justify-center p-2">
                 <div className="w-4/5">
                     <div className="grid grid-cols-1 lg:grid-cols-12">
-                        <div className="lg:col-span-10 px-2">
+                        <div className="lg:col-span-10 px-2 py-10">
                             <h1 className="font-bold text-5xl md:text-[70px] select-none">
                                 Pankaj Gupta,
                             </h1>
@@ -22,7 +22,7 @@ export function Home() {
                             <div className="flex flex-col justify-center items-center lg:items-start">
                                 
                                 <div className="text-gray-400 text-xl">
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, rerum. Debitis accusantium deleniti enim iste dignissimos? Similique, exercitationem! Odit vero, numquam quae ratione maxime sunt reiciendis laudantium quaerat iure ipsum!</p>
+                                    <p>Enthusiastic MERN stack developer in the early stages of my career journey. Passionate about creating web solutions and committed to mastering MongoDB, Express.js, React, and Node.js. Eager to apply my growing skills and contribute fresh perspectives to innovative projects in a collaborative environment.</p>
                                 </div>
                             </div>
                             <Socialfooter />
