@@ -29,7 +29,7 @@ export function Projects () {
                 {technologies.map(tech => <Tag technologie={tech}/>)}
             </div>
         </div>
-        <div className="mx-auto px-4 flex flex-col items-center lg:flex-row lg:items-start gap-3 w-4/5 min-h-screen">
+        <div className="mx-auto flex flex-col items-center lg:flex-row lg:items-start gap-3 w-4/5 min-h-screen">
             {userData.Projects.map(project => <ThreeDCardDemo {...project} theme={context?.theme}/>)}
         </div>
     </div>
