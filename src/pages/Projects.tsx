@@ -19,7 +19,7 @@ export function Projects () {
         tempArr = tempArr.filter((value, index, self) => self.indexOf(value) === index)
         setTechnologies(tempArr)
     }, [userData])
-    return <div className={`${context?.theme === "dark" ? 'bg-slate-950' : lightModeStyle}`}>
+    return <div className={`${context?.theme === "dark" ? 'bg-black' : lightModeStyle}`}>
         <Appbar />
         <div className="w-4/5 pt-10 mx-auto">
             <Search  theme={context?.theme} label="Projects" onChange={() => {
