@@ -41,7 +41,7 @@ export function Appbar() {
                         <DesktopNavLink to="/skills" icon={<RiDragMoveLine size={18} />} text="Skills" />
                         <DesktopNavLink to="/projects" icon={<RiInstanceLine size={18} />} text="Projects" />
                         <DesktopNavLink to="/education" icon={<RiGraduationCapLine size={18} />} text="Education" />
-                        <DesktopNavLink to="https://drive.google.com/file/d/18P2o4JulIHuBB_Bb-1ynBx0WAbKC54eZ/view?usp=sharing" icon={<RiFileTextLine size={18} />} text="Resume" />
+                        <DesktopNavLink to="https://drive.google.com/file/d/1BMb5qlEac2WOwtPIla3T1-8OWvFOcQKs/view?usp=sharing" icon={<RiFileTextLine size={18} />} text="Resume" />
                     </div>
                     <div className="flex gap-4 px-4 cursor-pointer">
                         <RiSearchLine size={18}/>
