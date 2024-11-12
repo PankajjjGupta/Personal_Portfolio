@@ -77,7 +77,7 @@ export function Appbar() {
             <MobileNavLink to="/skills" icon={<RiDragMoveLine size={20} />} text="Skills" />
             <MobileNavLink to="/projects" icon={<RiInstanceLine size={20} />} text="Projects" />
             <MobileNavLink to="/education" icon={<RiGraduationCapLine size={20} />} text="Education" />
-            <MobileNavLink to="https://drive.google.com/file/d/18P2o4JulIHuBB_Bb-1ynBx0WAbKC54eZ/view?usp=sharing" icon={<RiFileTextLine size={20} />} text="Resumé" />
+            <MobileNavLink to="https://drive.google.com/file/d/1BMb5qlEac2WOwtPIla3T1-8OWvFOcQKs/view?usp=sharing" icon={<RiFileTextLine size={20} />} text="Resumé" />
             <MobileNavLink to="/search" icon={<RiSearchLine size={20} />} text="Search" />
             <button 
                 onClick={handleTheme}
